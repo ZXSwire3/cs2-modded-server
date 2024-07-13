@@ -2,10 +2,8 @@ services:
   cs2_modded_server:
     image: cs2-modded-server
     container_name: cs2-modded-server
-    env_file:
-      - .env
     volumes:
-      - cs2-volume:/home/steam/
+      - /mnt/user/appdata/cs2-modded-server:/home/steam/
       - type: bind
         source: ./custom_files
         target: /home/custom_files/
